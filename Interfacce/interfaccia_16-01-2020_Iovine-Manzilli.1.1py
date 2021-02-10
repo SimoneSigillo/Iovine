@@ -49,9 +49,9 @@ def grafico ():
 app= App(title="GRAFICO A DISPERSIONE", width=1200,height=1000, bg="#93C572")
 etichetta = Text(app, text="INSERISCI IL NOME DEL FILE DA APRIRE: ", color="#B20000", size=30, font="helvetica")
 nomefile = TextBox(app, width=100)
-bottone1 = PushButton(app, text="GENERA LE COORDINATE", command=coordinate, args=[], width=40, height=4, align="top")
+bottoneUno = PushButton(app, text="GENERA LE COORDINATE", command=coordinate, args=[], width=40, height=4, align="top")
 output = TextBox(app, width=100, height=15, multiline=True)
 bottone = PushButton(app, text="GENERA IL GRAFICO", command=grafico, args=[], width=40, height=4, align="top")
 bottone.bg = "#F5DEB3"
-bottone1.bg = "#D2B48C"
+bottoneUno.bg = "#D2B48C"
 app.display()
