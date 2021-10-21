@@ -28,12 +28,13 @@ class calcComb():
         nel file word.italian.txt 
         '''
         f = open("word.italian.txt", 'r')
-        if parola in f:
-            print("La stringa ", parola, " ha un significato compiuto.")
-        else: print("La stringa ", parola, " non ha un significato compiuto.")
+        for riga in f:
+            if self.__stringa in riga:
+                print("La stringa ", self.__stringa, " ha un significato compiuto.")
+        f.close()
                 
         
-        return 0
+        
 
 
     # PERMUTAZIONI
@@ -42,7 +43,9 @@ class calcComb():
         '''
         restituire il numero di permutazioni SENZA ripetizione
         '''
-        return 0
+        n = len(self.__stringa)
+        permutazioni = math.factorial(n)
+        print("Il numero i permutazioni è ",permutazioni)
 
     def nPermutConRip(self):
         '''
@@ -68,13 +71,20 @@ class calcComb():
         '''
         restituire il numero di disposizioni semplici SENZA ripetizione
         '''
-        return 0
+        n = len(self.__stringa)
+        if n >= k:
+            disposizioni = math.factorial(n) / math.factorial(n-k)
+            print("Il numero di disposizioni semplici è ", disposizioni)
+        else:
+            print("k non può essere maggiore di n nelle disposizioni semplici")
 
     def nDispSemplConRip(self):
         '''
         restituire il numero di disposizioni semplici CON ripetizione
         '''
-        return 0
+        n = len(self.__stringa)
+        disposizioni = n**k
+        print("Il numero di disposizioni con ripetizione è ", disposizioni)
 
     def dispSemplSenzaRip(self):
         '''
@@ -95,13 +105,17 @@ class calcComb():
         '''
         restituire il numero delle combinazioni SENZA ripetizione
         '''
-        return 0
+        n = len(self.__stringa)
+        combinazioni = math.factorial(n) / (math.factorial(k) * math.factorial(n-k))
+        print("Il numero di combinazioni semplici è ", combinazioni)
 
     def nCombSemplConRip(self):
         '''
         restituire il numero delle combinazioni CON ripetizione
         '''
-        return 0
+        n = len(self.__stringa)
+        combinazioni = math.factorial(n+k-1) / (math.factorial(k) * math.factorial(n-1))
+        print("Il numero di combinazioni con ripetizione è ", combinazioni)
 
     def combSenzaRip(self):
         '''
@@ -116,5 +130,4 @@ class calcComb():
         '''
         return 0
 
-parola = calcComb(str(input("Inserisci una stringa: ")))
-parola.confUtil()
+
