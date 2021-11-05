@@ -22,19 +22,40 @@ class calcComb():
         
         return 0
 
+    def charRipetuti(self):
+        '''
+        questo metodo deve creare un dictionary all'interno del quale la chiave deve essere
+        il singolo carattere, il valore deve essere il numero di ripetizioni di quel carattere
+        
+        esempi di dictionary sono presenti nel file elementi_base/dictionary.py
+        '''
+
     def confUtil(self):
         '''
         verificare se la STRINGA attributo di istanza è presente
         nel file word.italian.txt 
         '''
         f = open("word.italian.txt", 'r')
+        riga = f.readline()
         stringaPresente == False
         for riga in f:
-            if self.__stringa in riga:
+            if self.__stringa == riga[:-1]:
                 stringaPresente == True
         f.close()
 
         return stringaPresente
+
+    def fattoriale(n):
+        '''
+        implementare una qualunque versione della funzione fattoriale
+        '''
+
+    def coeffBinom(n, k):
+        ''' 
+        implementare la formula del coefficiente binomiale a partire dal fattoriale
+        '''
+        pass
+
                 
         
         
@@ -46,8 +67,9 @@ class calcComb():
         '''
         restituire il numero di permutazioni SENZA ripetizione
         '''
-        n = len(self.__stringa)
-        PermutSenzaRip = math.factorial(n)
+        PermutSenzaRip = math.factorial(self.__N)
+
+        return PermutSenzaRip
 
     def nPermutConRip(self):
         '''
@@ -69,22 +91,20 @@ class calcComb():
 
     # DISPOSIZIONI
 
-    def nDispSemplSenzaRip(self):
+    def nDispSemplSenzaRip(self, k):
         '''
         restituire il numero di disposizioni semplici SENZA ripetizione
         '''
-        n = len(self.__stringa)
-        if n >= k:
-            DispSemplSenzaRip = math.factorial(n) / math.factorial(n-k)
+        if self.__N >= k:
+            DispSemplSenzaRip = math.factorial(self.__N) / math.factorial(self.__N-k)
 
         return DispSemplSenzaRip
 
-    def nDispSemplConRip(self):
+    def nDispSemplConRip(self, k):
         '''
         restituire il numero di disposizioni semplici CON ripetizione
         '''
-        n = len(self.__stringa)
-        DispSemplConRip = n**k
+        DispSemplConRip =self.__N **k
 
         return DispSemplConRip
 
@@ -103,21 +123,19 @@ class calcComb():
 
     # COMBINAZIONI
 
-    def nCombSemplSenzaRip(self):
+    def nCombSemplSenzaRip(self, k):
         '''
         restituire il numero delle combinazioni SENZA ripetizione
         '''
-        n = len(self.__stringa)
-        CombSemplSenzaRip = math.factorial(n) / (math.factorial(k) * math.factorial(n-k))
+        CombSemplSenzaRip = math.factorial(self.__N) / (math.factorial(k) * math.factorial(self.__N-k))
 
         return CombSemplSenzaRip
 
-    def nCombSemplConRip(self):
+    def nCombSemplConRip(self, k):
         '''
         restituire il numero delle combinazioni CON ripetizione
         '''
-        n = len(self.__stringa)
-        CombSemplConRip = math.factorial(n+k-1) / (math.factorial(k) * math.factorial(n-1))
+        CombSemplConRip = math.factorial(self.__N+k-1) / (math.factorial(k) * math.factorial(self.__N-1))
 
         return CombSemplConRip
 
