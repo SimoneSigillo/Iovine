@@ -9,7 +9,7 @@ class calcComb():
         self.__N = len(stringa)
         self.__stringa = stringa
         self.__listStringa = list(stringa)
-        self.__anagrammi = anagrammi(self.__stringa)
+        self.__anagrammi = anagrammi(stringa)
 
     def get_stringa(self):
         return self.__stringa
@@ -19,8 +19,9 @@ class calcComb():
 
     def setStringa(self, stringa):
         self.__stringa = stringa
-
-        return self.__stringa
+        self.__N = len(stringa)
+        self.__listStringa = list(stringa)
+        self.__anagrammi = anagrammi(stringa)
 
     def charRipetuti(self):
         carattere = {}
@@ -79,7 +80,7 @@ class calcComb():
             
     def anagrammi(self):
         #generiamo tutte le possibili permutazioni e le inseriamo in una lista
-        permutazioni = list(permutations(self.__listStringa))
+        permutazioni = list(itertools.permutations(self.__listStringa))
 
         #inizializiamo una variabile stringa di appoggio e una lista dove salvarle
         temp = ''
@@ -119,16 +120,13 @@ class calcComb():
         return PermutSenzaRip
 
     def nPermutConRip(self):
-        '''
-        restituire il numero di permutazioni CON ripetizione
-        '''
-        return 0
+        PermutConRip = calcComb.fattoriale(self.__N) / calcComb.charRipetuti(self)
+
+        return PermutConRip
 
     def permutSenzaRip(self):
-        from itertools import permutations
-
-        permutazioni = list(permutations(self.__listStringa))
-        return permutazioni
+        
+        return calcComb.anagrammi(self)
 
     def permutConRip(self):
         '''
@@ -149,11 +147,17 @@ class calcComb():
 
         return DispSemplConRip
 
-    def dispSemplSenzaRip(self):
-        '''
-        generare e restituire la lista delle disposizioni semplici SENZA ripetizione
-        '''
-        return 0
+    def dispSemplSenzaRip(self, k):
+        listaDisposizioni = list(itertools.permutations(self.__stringa, k))
+        temp = ''
+        disposizioni = []
+        for i in listaDisposizioni:
+            for carattere in i:
+                temp += carattere
+            disposizoni.append(temp)
+            temp = ''
+        
+        return disposizioni
 
     def dispSemplConRip(self):
         '''
@@ -173,18 +177,30 @@ class calcComb():
 
         return CombSemplConRip
 
-    def combSenzaRip(self):
-        '''
-        generare e restituire la lista delle combinazioni SENZA ripetizione
-        '''
-        return 0
+    def combSenzaRip(self, k):
+        listaCombinazioni = list(itertools.combinations(self.__stringa, k))
+        temp = ''
+        combinazioni = []
+        for i in listaCombinazioni:
+            for carattere in i:
+                temp += carattere
+            combinazioni.append(temp)
+            temp = ''
+        
+        return combinazioni
 
 
     def combConRip(self):
-        '''
-        generare e restituire la lista delle combinazioni CON ripetizione
-        '''
-        return 0
+        listaCombinazioni = list(itertools.combinations_with_replacement(self.__stringa, k))
+        temp = ''
+        combinazioni = []
+        for i in listaCombinazioni:
+            for carattere in i:
+                temp += carattere
+            combinazioni.append(temp)
+            temp = ''
+        
+        return combinazioni
 
     # PROBABILITA'
 
