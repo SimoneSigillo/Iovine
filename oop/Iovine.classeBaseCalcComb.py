@@ -1,6 +1,6 @@
 # classe calcolo combinatorio
 
-from itertools import permutations
+from itertools import permutations, combinations, combinations_with_replacement
 
 class calcComb():
 
@@ -9,7 +9,7 @@ class calcComb():
         self.__N = len(stringa)
         self.__stringa = stringa
         self.__listStringa = list(stringa)
-        self.__anagrammi = anagrammi(stringa)
+        self.__anagrammi = calcComb.anagrammi2(stringa)
 
     def get_stringa(self):
         return self.__stringa
@@ -21,12 +21,12 @@ class calcComb():
         self.__stringa = stringa
         self.__N = len(stringa)
         self.__listStringa = list(stringa)
-        self.__anagrammi = anagrammi(stringa)
+        self.__anagrammi = calcComb.anagrammi2(stringa)
 
     def charRipetuti(self):
         carattere = {}
         nCaratteri = 0
-        count = 0
+        nRipetizioni = 0
         for i in self.__listStringa:
             if (i in carattere):  # se trova il carattere nel dictionary incrementa il suo valore
                 carattere[str(i)] += 1
@@ -34,10 +34,10 @@ class calcComb():
                 carattere[str(i)] = 1 # se non lo trova lo aggiunge
         for i in carattere:
             if carattere[i]>1: # se trova una lettera ripetuta
-                count += 1 # incrementa il numero di caratteri che si ripetono
-                nCaratteri += carattere[i] # incrementa il numero totale di ripetizioni
+                nCaratteri += 1 # incrementa il numero di caratteri che si ripetono
+                nRipetizioni += carattere[i] # incrementa il numero totale di ripetizioni
 
-        variabiliAnagrammi = [count, nCaratteri, carattere]
+        variabiliAnagrammi = [nCaratteri, nRipetizioni, carattere]
 
         return variabiliAnagrammi
     
@@ -45,13 +45,71 @@ class calcComb():
     def cerca(self):
         f = open("word.italian.txt", 'r')
         riga = f.readline()
-        stringaPresente == False
+        stringaPresente = False
         for riga in f:
             if self.__stringa == riga[:-1]:
-                stringaPresente == True
-        f.close()
-
+                stringaPresente = True
+        
         return stringaPresente
+
+
+    
+            
+    def anagrammi(self):
+        permutazioni = list(permutations(self.__listStringa))
+        temp = ''
+        anagrammi = []
+        for i in permutazioni:
+            for carattere in i:
+                temp += carattere
+            anagrammi.append(temp)
+            temp = ''
+
+        return anagrammi
+    
+
+    def confUtil(self):
+        anagrammiPuliti = []
+        for i in self.__anagrammi:
+            calcComb.cerca2(i)
+            if  calcComb.cerca2(i) == True:
+                anagrammiPuliti.append(i)
+
+        return anagrammiPuliti
+                
+            
+    def cerca2(stringa):
+        f = open("word.italian.txt", 'r')
+        riga = f.readline()
+        stringaPresente = False
+        for riga in f:
+            if stringa == riga[:-1]:
+                stringaPresente = True
+        
+        return stringaPresente #serve per il funzionamento del modulo confUtil
+
+
+    def anagrammi2(stringa):
+        permutazioni = list(permutations(list(stringa)))
+        temp = ''
+        anagrammi = []
+        for i in permutazioni:
+            for carattere in i:
+                temp += carattere
+            anagrammi.append(temp)
+            temp = ''
+
+        return anagrammi #serve per il funzionamento del modulo confUtil e per self.__anagrammi
+
+
+    '''def confUtil2(stringa):
+        anagrammiPuliti = []
+        for i in calcComb.anagrammi2(stringa):
+            calcComb.cerca2(i)
+            if calcComb.cerca2(i) == True:
+                anagrammiPuliti.append(i)
+
+        return anagrammiPuliti''' #inutile
 
 
     def fattoriale(n):
@@ -77,38 +135,6 @@ class calcComb():
             return 0
         else:
             return calcComb.fattoriale(n) // (calcComb.fattoriale(k) * calcComb.fattoriale(n-k))
-            
-    def anagrammi(self):
-        #generiamo tutte le possibili permutazioni e le inseriamo in una lista
-        permutazioni = list(itertools.permutations(self.__listStringa))
-
-        #inizializiamo una variabile stringa di appoggio e una lista dove salvarle
-        temp = ''
-        anagrammi = []
-        for i in permutazioni:
-            for carattere in i:
-                # in temp concateno tutti gli elementi della tupla così da
-                # ottenere i singoli anagrammi della stringa iniziale
-                temp += carattere 
-
-            # aggiungo la parola ricostruita dalla tupla alla lista finale degli anagrammi
-            anagrammi.append(temp)
-            # "svuoto" la variabile temp così da ricostruire un secondo anagramma
-            temp = ''
-
-        return anagrammi
-
-    def confUtil(self):
-        anagrammiPuliti = []
-        for i in self.__anagrammi:
-            calcComb.cerca(i)
-            if stringaPresente == True:
-                anagrammiPuliti.append(i)
-
-        return anagrammiPuliti
-                
-            
-
         
 
 
@@ -148,13 +174,13 @@ class calcComb():
         return DispSemplConRip
 
     def dispSemplSenzaRip(self, k):
-        listaDisposizioni = list(itertools.permutations(self.__stringa, k))
+        listaDisposizioni = list(permutations(self.__stringa, k))
         temp = ''
         disposizioni = []
         for i in listaDisposizioni:
             for carattere in i:
                 temp += carattere
-            disposizoni.append(temp)
+            disposizioni.append(temp)
             temp = ''
         
         return disposizioni
@@ -178,7 +204,7 @@ class calcComb():
         return CombSemplConRip
 
     def combSenzaRip(self, k):
-        listaCombinazioni = list(itertools.combinations(self.__stringa, k))
+        listaCombinazioni = list(combinations(self.__stringa, k))
         temp = ''
         combinazioni = []
         for i in listaCombinazioni:
@@ -190,8 +216,8 @@ class calcComb():
         return combinazioni
 
 
-    def combConRip(self):
-        listaCombinazioni = list(itertools.combinations_with_replacement(self.__stringa, k))
+    def combConRip(self, k):
+        listaCombinazioni = list(combinations_with_replacement(self.__stringa, k))
         temp = ''
         combinazioni = []
         for i in listaCombinazioni:
@@ -207,12 +233,12 @@ class calcComb():
     def probConfUtil(self):
         casiFavorevoli = 0
         for i in self.__anagrammi: 
-            Vtemp = calcComb.confUtil(i)
+            Vtemp = calcComb.cerca2(i)
             if Vtemp == False:
                 None
             elif Vtemp == True:
                 casiFavorevoli += 1
         
-        probabilità = casifav/(len(self.__anagrammi))
+        probabilità = casiFavorevoli/(len(self.__anagrammi))
 
         return probabilità
