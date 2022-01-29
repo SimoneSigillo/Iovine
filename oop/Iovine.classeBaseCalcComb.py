@@ -181,29 +181,29 @@ class calcComb():
 
 
     def combSempl(self, k):                                                                         # Fornisce la lista di combinazioni semplici.
-        listaCombinazioni = list(combinations(self.__stringa, k))
+        listaCombSempl = list(combinations(self.__stringa, k))
         temp = ''
-        combinazioni = []
-        for i in listaCombinazioni:
+        combSempl = []
+        for i in listaCombSempl:
             for carattere in i:
                 temp += carattere
-            combinazioni.append(temp)
+            combSempl.append(temp)
             temp = ''
         
-        return combinazioni
+        return combSempl
 
 
     def combConRip(self, k):                                                                        # Fornisce la lista di combinazioni con ripetizione.
-        listaCombinazioni = list(combinations_with_replacement(self.__stringa, k))
+        listaCombConRip = list(combinations_with_replacement(self.__stringa, k))
         temp = ''
-        combinazioni = []
-        for i in listaCombinazioni:
+        combSempl = []
+        for i in listaCombConRip:
             for carattere in i:
                 temp += carattere
-            combinazioni.append(temp)
+            combConRip.append(temp)
             temp = ''
         
-        return combinazioni
+        return combConRip
 
 
 
