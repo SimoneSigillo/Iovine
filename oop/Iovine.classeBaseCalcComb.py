@@ -22,8 +22,8 @@ class calcComb():
         self.__listStringa = list(stringa)
         self.__anagrammi = self.anagrammi()
 
-    def charRipetuti(self):                                                                         # Fornisce il numero di caratteri che si ripetono nella stringa, il numero di                                 
-        carattere = {}                                                                              # ripetizioni totale e un dictionary con le lettere come chiavi e il numero delle                                                                              #volte che il carattere si presenta nella parola come valore.                                                                            
+    def charRipetuti(self):                                                                         # Fornisce un dictionary con le lettere come chiavi e il numero delle volte che il                                 
+        carattere = {}                                                                              # carattere si presenta nella parola come valore e la lista dei valori.                                                                            
         for i in self.__listStringa:
             if (i in carattere):  # se trova il carattere nel dictionary incrementa il suo valore
                 carattere[str(i)] += 1
