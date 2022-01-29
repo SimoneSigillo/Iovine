@@ -4,7 +4,7 @@ from itertools import permutations, combinations, combinations_with_replacement
 
 class calcComb():
 
-    def __init__(self, stringa):                                                                    # Il metodo costruttore inizializza le variabili dell'istanza, ossia rispettivamente
+    def __init__(self, stringa):                                                                    # Il metodo costruttore inizializza gli attributi dell'istanza, ossia rispettivamente
         self.__N = len(stringa)                                                                     # la lunghezza della stringa, la stringa, la lista delle lettere della stringa e la 
         self.__stringa = stringa                                                                    # lista degli anagrammi della stringa                            
         self.__listStringa = list(stringa)
