@@ -1,19 +1,22 @@
 # RUZZLE
 ### Indice
-1. [Abstract Descrizione](#general-info)
-2. [Interfaccia](#technologies)
-3. [Installation](#installation)
-4. [Collaboration](#collaboration)
-5. [FAQs](#faqs)
-## Abstract Descrizione
+1. [Abstract Descrizione]
+2. [Interfaccia]
+3. [Funzionalità]
+4. [Collaboration]
+5. [FAQs]
 ***
+
+## Abstract Descrizione
 Ruzzle è un gioco interattivo online in cui l’obiettivo è quello di formare il maggior numero di parole con le lettere presenti nella griglia in un tempo prestabilito. Il punteggio dipenderà anche dalla lunghezza delle parole e dall’utilizzo di particolari caratteri.
 Si svolgeranno 3 round al termine dei quali il vincitore sarà chi avrà totalizzato il punteggio maggiore.
+***
+
 ## Interfaccia
+
 ***
 
 ## Funzionalità
-***
 All’avvio del gioco, viene chiesto di digitare il proprio nome utente, dopodichè si apre la schermata iniziale del gioco che propone le diverse modalità. Una volta scelta la modalità di gioco, occorre attendere il collegamento con un altro giocatore per avviare la partita.
 
 #### Regole del gioco:
@@ -47,3 +50,4 @@ Oltre alla classica, vi sono altre modalità che presentano diverse caratteristi
 - easy, griglia 6x6;
 - hard, griglia 3x3;
 - 1vs4: la partita si disputerà in 8 giocatori.
+***
