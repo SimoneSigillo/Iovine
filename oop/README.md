@@ -63,7 +63,7 @@ Durante l’elaborazione un oggetto viene creato, utilizzato e infine distrutto.
 Nel nostro caso è stata creata la classe calcComb() che inizializza gli attributi dell’istanza e presenta come i moduli applicabili all’oggetto i modi per raggruppare e/o ordinare secondo date regole gli elementi di un insieme finito di oggetti, racchiusi nel Calcolo Combinatorio.
 
 ### Calcolo combinatorio
-In definitiva il Calcolo combinatorio fornisce quegli strumenti di calcolo per determinare il numero di raggruppamenti che si possono formare con un numero k di oggetti presi da un insieme contenente n oggetti (n ≥ k) secondo le modalità seguenti:
+In definitiva il calcolo combinatorio fornisce quegli strumenti di calcolo per determinare il numero di raggruppamenti che si possono formare con un numero k di oggetti presi da un insieme contenente n oggetti (n ≥ k) secondo le modalità seguenti:
 - i k oggetti possono formare gruppi ordinati ([disposizioni](#Disposizioni-semplici));
 - se k = n otterremo dei gruppi ordinati ([permutazioni](#Permutazioni-semplici));
 - i k oggetti possono formare gruppi non ordinati ([combinazioni](#Combinazioni-semplici)).
