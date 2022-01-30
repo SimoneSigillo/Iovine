@@ -71,7 +71,7 @@ In definitiva il calcolo combinatorio fornisce quegli strumenti di calcolo per d
 Esaminiamo in dettaglio questi raggruppamenti.
 
 #### Disposizioni semplici
-Si considera un insieme A formato da n elementi distinti ed un numero k ≤ n. Si chiamano disposizioni semplici degli n elementi presi a k a k ( o disposizioni della classe k) un gruppo ordinato formato da k degli n elementi dell’insieme dato A in modo che valgano le seguenti proprietà:
+Si considera un insieme formato da n elementi distinti ed un numero k ≤ n. Si chiamano disposizioni semplici degli n elementi presi a k a k ( o disposizioni della classe k) un gruppo ordinato formato da k degli n elementi dell’insieme dato in modo che valgano le seguenti proprietà:
 - in ciascun raggruppamento figurano k oggetti senza ripetizione;
 - due di tali disposizioni si ritengono diverse quando differiscono per almeno un elemento oppure per l’ordine con cui gli stessi elementi si presentano.
 
@@ -88,7 +88,7 @@ Si considera un insieme costituito da n elementi distinti ed un numero naturale 
 - in ciascun raggruppamento figurano k oggetti ed uno stesso oggetto può figurare, ripetuto, fino ad un massimo di k volte;
 - due qualsiasi raggruppamenti sono distinti se uno di essi contiene almeno un oggetto che non figura nell’altro, oppure gli oggetti sono diversamente ordinati, oppure gli oggetti che figurano in uno figurano anche nell’altro ma sono ripetuti un numero diverso di volte.
 
-Il numero delle disposizioni con ripetizione si indica con il simbolo D’n, k e si dimostra che tale numero è dato da:
+Il numero delle disposizioni con ripetizione si indica con il simbolo D’~n, k~ e si dimostra che tale numero è dato da:
 
 ![forumla-disposizioni-con-ripetizione](https://www.studenti.it/images/matematica/pictures/4135mo/images/MO.4.13.5_9256.png)
 
