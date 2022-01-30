@@ -75,7 +75,7 @@ Si considera un insieme formato da n elementi distinti ed un numero k ≤ n. Si 
 - in ciascun raggruppamento figurano k oggetti senza ripetizione;
 - due di tali disposizioni si ritengono diverse quando differiscono per almeno un elemento oppure per l’ordine con cui gli stessi elementi si presentano.
 
-Il numero delle disposizioni semplici di n elementi distinti della classe k, si indica con il simbolo Dn, k il cui valore è uguale al prodotto di k numeri interi consecutivi decrescenti dei quali il primo è n.
+Il numero delle disposizioni semplici di n elementi distinti della classe k, si indica con il simbolo D<sub>n, k</sub> il cui valore è uguale al prodotto di k numeri interi consecutivi decrescenti dei quali il primo è n.
 
 Si ha cioè:
 
@@ -88,13 +88,12 @@ Si considera un insieme costituito da n elementi distinti ed un numero naturale 
 - in ciascun raggruppamento figurano k oggetti ed uno stesso oggetto può figurare, ripetuto, fino ad un massimo di k volte;
 - due qualsiasi raggruppamenti sono distinti se uno di essi contiene almeno un oggetto che non figura nell’altro, oppure gli oggetti sono diversamente ordinati, oppure gli oggetti che figurano in uno figurano anche nell’altro ma sono ripetuti un numero diverso di volte.
 
-Il numero delle disposizioni con ripetizione si indica con il simbolo D’~n, k~ e si dimostra che tale numero è dato da:
+Il numero delle disposizioni con ripetizione si indica con il simbolo D’<sub>n, k</sub> e si dimostra che tale numero è dato da:
 
 ![forumla-disposizioni-con-ripetizione](https://www.studenti.it/images/matematica/pictures/4135mo/images/MO.4.13.5_9256.png)
 
 #### Permutazioni semplici
-Le permutazioni semplici altro non sono che le disposizioni di n oggetti presi ad n ad n. Ossia, dato un insieme di n oggetti, si dicono permutazioni di tali n oggetti tutti i gruppi che si possono formare con gli n oggetti dati prendendoli tutti. Se ne deduce allora che le
-permutazioni semplici differiscono soltanto per l’ordine con cui sono disposti gli n oggetti distinti contenuti nei vari raggruppamenti.
+Le permutazioni semplici altro non sono che le disposizioni di n oggetti presi ad n ad n. Ossia, dato un insieme di n oggetti, si dicono permutazioni di tali n oggetti tutti i gruppi che si possono formare con gli n oggetti dati prendendoli tutti. Se ne deduce allora che le permutazioni semplici differiscono soltanto per l’ordine con cui sono disposti gli n oggetti distinti contenuti nei vari raggruppamenti.
 Dalla definizione segue quindi che le permutazioni coincidono con le disposizioni semplici di classe n, quindi il calcolo delle permutazioni è uguale al calcolo del numero delle disposizioni semplici di n elementi di classe n; quindi il numero delle permutazioni di n elementi distinti è uguale al prodotto dei primi n numeri naturali (escluso lo zero) ed è dato dal fattoriale del numero n, ossia:
 Pn = n!
 
@@ -108,7 +107,7 @@ Pn(h, k,...) = n! / (h! k! …)
 Dato un insieme di n elementi, si dicono combinazioni semplici degli n elementi presi a k a k (o di classe k) k ≤ n tutti i gruppi di k elementi, scelti fra gli n dell’insieme dato, in modo che ciascun gruppo differisca dai restanti almeno per uno degli elementi in esso contenuti (senza
 considerare, quindi, l’ordine degli elementi).
 Da notare la differenza fra disposizioni e combinazioni (semplici): mentre nelle disposizioni si tiene conto dell’ordine, nelle combinazioni semplici, invece, si considerano distinti solo quando due i raggruppamenti differiscono almeno per un elemento. 
-Per determinare il numero delle combinazioni semplici di n elementi di classe k, e che indichiamo con il simbolo Cn, k, ci serviamo della formula:
+Per determinare il numero delle combinazioni semplici di n elementi di classe k, e che indichiamo con il simbolo C<sub>n, k</sub>, ci serviamo della formula:
 Cn,k = Dn, k / Pk = n (n - 1) (n - 2) … (n - k +1) / k! = n! / k! (n - k +1)!
 
 Il numero di combinazioni viene indicato anche con il simbolo (n; k), che si chiama coefficiente binomiale e si legge “n su k”.
@@ -117,9 +116,9 @@ Il coefficiente binomiale di due numeri n e k, con 0  k  n, è il numero
 
 #### Combinazioni con ripetizione
 Considerando un insieme formato da n elementi e fissando un numero k (senza alcuna limitazione superiore), si costruiscono i possibili raggruppamenti distinti prendendo k elementi dell’insieme dato in modo che:
-ogni elemento può essere ripetuto al massimo fino a k volte;
-non interessa l’ordine con cui gli elementi si presentano;
-è diverso il numero di volte col quale un elemento compare.
+- ogni elemento può essere ripetuto al massimo fino a k volte;
+- non interessa l’ordine con cui gli elementi si presentano;
+- è diverso il numero di volte col quale un elemento compare.
 
 La formula che dà il numero delle combinazioni con ripetizione di n elementi di classe k è:
 C’n, k = C’n+k-1, k = (n + k - 1; k) = (n + k - 1) (n + k - 2) … (n + 1) n / k!
