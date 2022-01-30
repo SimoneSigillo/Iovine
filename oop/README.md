@@ -106,7 +106,7 @@ Le permutazioni con ripetizione di n elementi, di cui h, k, … ripetuti, sono t
 ![permutazioni-con-ripetizione](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/permutazioni_con_ripetizione.PNG)
         
 #### Combinazioni semplici
-Dato un insieme di n elementi, si dicono combinazioni semplici degli n elementi presi a k a k (o di classe k) k ≤ n tutti i gruppi di k elementi, scelti fra gli n dell’insieme dato, in modo che ciascun gruppo differisca dai restanti almeno per uno degli elementi in esso contenuti (senza
+Dato un insieme di n elementi, si dicono combinazioni semplici degli n elementi presi a k a k (o di classe k) con k ≤ n tutti i gruppi di k elementi, scelti fra gli n dell’insieme dato, in modo che ciascun gruppo differisca dai restanti almeno per uno degli elementi in esso contenuti (senza
 considerare, quindi, l’ordine degli elementi).
 Da notare la differenza fra disposizioni e combinazioni (semplici): mentre nelle disposizioni si tiene conto dell’ordine, nelle combinazioni semplici, invece, si considerano distinti solo quando due i raggruppamenti differiscono almeno per un elemento. 
 Per determinare il numero delle combinazioni semplici di n elementi di classe k, e che indichiamo con il simbolo C<sub>n, k</sub>, ci serviamo della formula:
@@ -114,8 +114,8 @@ Per determinare il numero delle combinazioni semplici di n elementi di classe k,
 ![combinazioni-semplici](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/combinazioni_semplici.PNG)
 
 
-Il numero di combinazioni viene indicato anche con il simbolo (n; k), che si chiama coefficiente binomiale e si legge “n su k”.
-Il coefficiente binomiale di due numeri n e k è il numero:
+Il numero di combinazioni viene indicato anche con il simbolo ![simbolo-coefficiente-binomiale](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/simbolo_coefficiente_binomiale.PNG), che si chiama coefficiente binomiale e si legge “n su k”.
+Il coefficiente binomiale di due numeri n e k, con 0  k  n, è il numero:
 
 ![coefficiente-binomiale](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/coefficiente_binomiale.PNG)
 
