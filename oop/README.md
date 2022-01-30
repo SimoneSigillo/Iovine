@@ -115,7 +115,7 @@ Per determinare il numero delle combinazioni semplici di n elementi di classe k,
 
 
 Il numero di combinazioni viene indicato anche con il simbolo ![simbolo-coefficiente-binomiale](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/simbolo_coefficiente_binomiale.PNG), che si chiama coefficiente binomiale e si legge “n su k”.
-Il coefficiente binomiale di due numeri n e k, con 0  k  n, è il numero:
+Il coefficiente binomiale di due numeri n e k, con 0 ≤ k ≤ n, è il numero:
 
 ![coefficiente-binomiale](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/coefficiente_binomiale.PNG)
 
