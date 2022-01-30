@@ -53,16 +53,20 @@ Oltre alla classica, vi sono altre modalità che presentano diverse caratteristi
 ***
 ## Requisiti e Caratteristiche tecniche
 Il codice del gioco è stato scritto seguendo una programmazione a oggetti.
-La programmazione OOP (Object oriented Programming) "orientata agli oggetti", pone l’attenzione sui dati da manipolare, piuttosto che sulle procedure che li manipolano e impone che siano questi ultimi alla base del Modello Orientato ai Dati, un sistema costituito da un insieme di entità e oggetti che interagiscono tra loro. Il dato viene visto come un tipo di dato astratto caratterizzato da un insieme di valori che lo caratterizzano e da un insieme di operazioni che possono essere applicate a esso. E’ stata utilizzata la OOP poiché garantisce modularità e "riusabilità" del software, facile gestione e manutenzione di progetti di grandi dimensioni, riduce la dipendenza del programma dalla rappresentazione dei dati ai quali accede mediante un’interfaccia. 
+### Programmazione a oggetti
+La programmazione OOP (Object oriented Programming) "orientata agli oggetti", pone l’attenzione sui dati da manipolare, piuttosto che sulle procedure che li manipolano e impone che siano questi ultimi alla base del Modello Orientato ai Dati, un sistema costituito da un insieme di entità e oggetti che interagiscono tra loro. Il dato viene visto come un tipo di dato astratto caratterizzato da un insieme di valori che lo caratterizzano e da un insieme di operazioni che possono essere applicate a esso. E’ stata utilizzata la OOP poiché garantisce modularità e "riusabilità" del software, facile gestione e manutenzione di progetti di grandi dimensioni, riduce la dipendenza del programma dalla rappresentazione dei dati ai quali accede mediante un’interfaccia.
+#### Classi e Oggetti
 L’elemento principale della OOP è la classe, una descrizione astratta di un tipo di dato che descrive una famiglia di oggetti con caratteristiche e comportamenti simili. Un oggetto è un'istanza della classe, cioè la rappresentazione concreta di una classe. Quando si instanzia una variabile definendola di una classe si crea un oggetto di quella classe rappresentato dal nome della variabile istanziata. La differenza tra classe e oggetto è la stessa che c’è tra tipo di dato e dato. 
+#### Attributi e Metodi
 Una classe è costituita da attributi (campi che specificano le caratteristiche o proprietà che tutti gli oggetti della classe devono avere, i cui valori in un certo istante determinano lo stato del singolo oggetto della classe) e da Metodi (funzioni che specificano le azioni o i comportamenti ammissibili che un oggetto della classe è in grado di compiere; tali operazioni possono comunicare all’esterno lo stato dell’oggetto o modificarlo). I metodi di una classe sono l’Interfaccia della classe, l’unico strumento tramite il quale è possibile interagire con gli oggetti della classe.
 Durante l’elaborazione un oggetto viene creato, utilizzato e infine distrutto. Gli oggetti di una classe vengono creati da uno specifico metodo Costruttore che deve avere lo stesso nome della classe che quando viene eseguito alloca la memoria necessaria a contenere l’oggetto e ne inizializza gli attributi. 
 Nel nostro caso è stata creata la classe calcComb() che inizializza gli attributi dell’istanza e presenta come i moduli applicabili all’oggetto i modi per raggruppare e/o ordinare secondo date regole gli elementi di un insieme finito di oggetti, racchiusi nel Calcolo Combinatorio.
 
+### Calcolo combinatorio
 In definitiva il Calcolo combinatorio fornisce quegli strumenti di calcolo per determinare il numero di raggruppamenti che si possono formare con un numero k di oggetti presi da un insieme contenente n oggetti (n ≥ k) secondo le modalità seguenti:
 - i k oggetti possono formare gruppi ordinati ([disposizioni](#Disposizioni-semplici));
-- i k oggetti possono formare gruppi non ordinati ([combinazioni](#Combinazioni-semplici);
-- se k = n otterremo dei gruppi ordinati ([permutazioni](#Permutazioni-semplici)).
+- se k = n otterremo dei gruppi ordinati ([permutazioni](#Permutazioni-semplici));
+- i k oggetti possono formare gruppi non ordinati ([combinazioni](#Combinazioni-semplici)).
 
 Esaminiamo in dettaglio questi raggruppamenti.
 
