@@ -6,7 +6,7 @@
 4. [Caratteristiche tecniche](#Caratteristiche-tecniche)
 ***
 
-## Abstract Descrizione
+## Descrizione
 Ruzzle è un gioco interattivo online in cui l’obiettivo è quello di formare il maggior numero di parole con le lettere presenti nella griglia in un tempo prestabilito. Il punteggio dipenderà anche dalla lunghezza delle parole e dall’utilizzo di particolari caratteri.
 Si svolgeranno 3 round al termine dei quali il vincitore sarà chi avrà totalizzato il punteggio maggiore.
 ***
