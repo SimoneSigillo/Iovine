@@ -1,9 +1,9 @@
 # RUZZLE
 ### Indice
-1. [Abstract Descrizione]
-2. [Interfaccia]
-3. [Funzionalità]
-4. [Requisiti e Caratteristiche tecniche]
+1. [Abstract Descrizione] (#Abstract-Descrizione)
+2. [Interfaccia] (#Interfaccia)
+3. [Funzionalità] (#Funzionalità)
+4. [Requisiti e Caratteristiche tecniche] (#Requisiti-e-Caratteristiche-tecniche)
 5. [FAQs]
 ***
 
