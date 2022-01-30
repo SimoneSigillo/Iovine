@@ -79,7 +79,7 @@ Il numero delle disposizioni semplici di n elementi distinti della classe k, si 
 
 Si ha cioè:
 
-![forumla-disposizioni-semplici](https://www.okpedia.it/data/okpedia/formula-disposizioni-senza-ripetizioni.gif)
+![disposizioni-semplici](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/disposizioni_semplici.PNG)
 
 Il simbolo n! si legge n fattoriale e non è altro che il prodotto di n numeri interi decrescenti a partire da n e per definizione si pone 0! = 1. Il suo calcolo è eseguito in uno dei metodi della classe calcComb().
 
@@ -90,29 +90,35 @@ Si considera un insieme costituito da n elementi distinti ed un numero naturale 
 
 Il numero delle disposizioni con ripetizione si indica con il simbolo D’<sub>n, k</sub> e si dimostra che tale numero è dato da:
 
-![forumla-disposizioni-con-ripetizione](https://www.studenti.it/images/matematica/pictures/4135mo/images/MO.4.13.5_9256.png)
+![disposizioni-con-ripetizione](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/disposizioni_con_ripetizione.PNG)
 
 #### Permutazioni semplici
 Le permutazioni semplici altro non sono che le disposizioni di n oggetti presi ad n ad n. Ossia, dato un insieme di n oggetti, si dicono permutazioni di tali n oggetti tutti i gruppi che si possono formare con gli n oggetti dati prendendoli tutti. Se ne deduce allora che le permutazioni semplici differiscono soltanto per l’ordine con cui sono disposti gli n oggetti distinti contenuti nei vari raggruppamenti.
 Dalla definizione segue quindi che le permutazioni coincidono con le disposizioni semplici di classe n, quindi il calcolo delle permutazioni è uguale al calcolo del numero delle disposizioni semplici di n elementi di classe n; quindi il numero delle permutazioni di n elementi distinti è uguale al prodotto dei primi n numeri naturali (escluso lo zero) ed è dato dal fattoriale del numero n, ossia:
-Pn = n!
+
+![permutazioni-semplici](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/permutazoni_semplici.PNG)
 
 Gli anagrammi altro non sono che le permutazioni che si ottengono da una parola variando solo il posto delle lettere.
 
 #### Permutazioni con ripetizione
 Le permutazioni con ripetizione di n elementi, di cui h, k, … ripetuti, sono tutti i gruppi formati dagli n elementi, che differiscono per l’ordine in cui si presentano gli elementi distinti e la posizione che occupano gli elementi ripetuti:
-Pn(h, k,...) = n! / (h! k! …)
+
+![permutazioni-con-ripetizione](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/permutazioni_con_ripetizione.PNG)
         
 #### Combinazioni semplici
 Dato un insieme di n elementi, si dicono combinazioni semplici degli n elementi presi a k a k (o di classe k) k ≤ n tutti i gruppi di k elementi, scelti fra gli n dell’insieme dato, in modo che ciascun gruppo differisca dai restanti almeno per uno degli elementi in esso contenuti (senza
 considerare, quindi, l’ordine degli elementi).
 Da notare la differenza fra disposizioni e combinazioni (semplici): mentre nelle disposizioni si tiene conto dell’ordine, nelle combinazioni semplici, invece, si considerano distinti solo quando due i raggruppamenti differiscono almeno per un elemento. 
 Per determinare il numero delle combinazioni semplici di n elementi di classe k, e che indichiamo con il simbolo C<sub>n, k</sub>, ci serviamo della formula:
-Cn,k = Dn, k / Pk = n (n - 1) (n - 2) … (n - k +1) / k! = n! / k! (n - k +1)!
+
+![combinazioni-semplici](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/combinazioni_semplici.PNG)
+
 
 Il numero di combinazioni viene indicato anche con il simbolo (n; k), che si chiama coefficiente binomiale e si legge “n su k”.
-Il coefficiente binomiale di due numeri n e k, con 0  k  n, è il numero
-(n; k) = n! / k! (n - k +1)!
+Il coefficiente binomiale di due numeri n e k è il numero:
+
+![coefficiente-binomiale](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/coefficiente_binomiale.PNG)
+
 
 #### Combinazioni con ripetizione
 Considerando un insieme formato da n elementi e fissando un numero k (senza alcuna limitazione superiore), si costruiscono i possibili raggruppamenti distinti prendendo k elementi dell’insieme dato in modo che:
@@ -121,4 +127,6 @@ Considerando un insieme formato da n elementi e fissando un numero k (senza alcu
 - è diverso il numero di volte col quale un elemento compare.
 
 La formula che dà il numero delle combinazioni con ripetizione di n elementi di classe k è:
-C’n, k = C’n+k-1, k = (n + k - 1; k) = (n + k - 1) (n + k - 2) … (n + 1) n / k!
+
+![combinazioni-con-ripetizione](https://github.com/ettoreiovine/Iovine/blob/main/oop/formulario/combinazioni_con_ripetizione.PNG)
+
