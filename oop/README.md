@@ -31,10 +31,10 @@ Il gioco si sviluppa in 3 manche, e il punteggio finale è dato dalla somma dei 
 - 1 Punto:  A E I O
 
 ##### Moltiplicatori:
-- DL (Double Letter), duplica il valore della lettera;
-- TL (Triple Letter), triplica il valore della lettere;
-- DW (Double Word), duplica il valore della parola;
-- TW (Triple Word), triplica il valore della parola.
+- ![#228B22](https://via.placeholder.com/15/228B22/000000?text=DL) (Double Letter), duplica il valore della lettera;
+- ![#1589F0](https://via.placeholder.com/15/1589F0/000000?text=TL) (Triple Letter), triplica il valore della lettere;
+- ![#FFD800](https://via.placeholder.com/15/FFD800/000000?text=DW) (Double Word), duplica il valore della parola;
+- ![#f03c15](https://via.placeholder.com/15/f03c15/000000?text=TW) (Triple Word), triplica il valore della parola.
 
 ##### Bonus:
 - Lunghezza parola ≥ 5: 5 Punti
