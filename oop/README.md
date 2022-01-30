@@ -52,3 +52,79 @@ Oltre alla classica, vi sono altre modalità che presentano diverse caratteristi
 - 1vs4: la partita si disputerà in 8 giocatori.
 ***
 ## Requisiti e Caratteristiche tecniche
+Il codice del gioco è stato scritto seguendo una programmazione a oggetti.
+La programmazione OOP (Object oriented Programming) "orientata agli oggetti", pone l’attenzione sui dati da manipolare, piuttosto che sulle procedure che li manipolano e impone che siano questi ultimi alla base del Modello Orientato ai Dati, un sistema costituito da un insieme di entità e oggetti che interagiscono tra loro. Il dato viene visto come un tipo di dato astratto caratterizzato da un insieme di valori che lo caratterizzano e da un insieme di operazioni che possono essere applicate a esso. E’ stata utilizzata la OOP poiché garantisce modularità e "riusabilità" del software, facile gestione e manutenzione di progetti di grandi dimensioni, riduce la dipendenza del programma dalla rappresentazione dei dati ai quali accede mediante un’interfaccia. 
+L’elemento principale della OOP è la classe, una descrizione astratta di un tipo di dato che descrive una famiglia di oggetti con caratteristiche e comportamenti simili. Un oggetto è un'istanza della classe, cioè la rappresentazione concreta di una classe. Quando si instanzia una variabile definendola di una classe si crea un oggetto di quella classe rappresentato dal nome della variabile istanziata. La differenza tra classe e oggetto è la stessa che c’è tra tipo di dato e dato. 
+Una classe è costituita da attributi (campi che specificano le caratteristiche o proprietà che tutti gli oggetti della classe devono avere, i cui valori in un certo istante determinano lo stato del singolo oggetto della classe) e da Metodi (funzioni che specificano le azioni o i comportamenti ammissibili che un oggetto della classe è in grado di compiere; tali operazioni possono comunicare all’esterno lo stato dell’oggetto o modificarlo). I metodi di una classe sono l’Interfaccia della classe, l’unico strumento tramite il quale è possibile interagire con gli oggetti della classe.
+Durante l’elaborazione un oggetto viene creato, utilizzato e infine distrutto. Gli oggetti di una classe vengono creati da uno specifico metodo Costruttore che deve avere lo stesso nome della classe che quando viene eseguito alloca la memoria necessaria a contenere l’oggetto e ne inizializza gli attributi. 
+Nel nostro caso è stata creata la classe calcComb() che inizializza gli attributi dell’istanza e presenta come i moduli applicabili all’oggetto i modi per raggruppare e/o ordinare secondo date regole gli elementi di un insieme finito di oggetti, racchiusi nel Calcolo Combinatorio.
+
+In definitiva il Calcolo combinatorio fornisce quegli strumenti di calcolo per determinare il numero di raggruppamenti che si possono formare con un numero k di oggetti presi da un insieme contenente n oggetti (n ≥ k) secondo le modalità seguenti:
+ i k oggetti possono formare gruppi ordinati (disposizioni);
+i k oggetti possono formare gruppi non ordinati (combinazioni);
+se k = n otterremo dei gruppi ordinati (permutazioni).
+
+Esaminiamo in dettaglio questi raggruppamenti.
+
+
+Disposizioni semplici
+Si considera un insieme A formato da n elementi distinti ed un numero k ≤ n. Si chiamano disposizioni semplici degli n elementi presi a k a k ( o disposizioni della classe k) un gruppo ordinato formato da k degli n elementi dell’insieme dato A in modo che valgano le seguenti
+proprietà:
+in ciascun raggruppamento figurano k oggetti senza ripetizione;
+due di tali disposizioni si ritengono diverse quando differiscono per almeno un elemento oppure per l’ordine con cui gli stessi elementi si presentano.
+
+Il numero delle disposizioni semplici di n elementi distinti, della classe k, si indica con il simbolo Dn, k il cui valore è dato dal teorema seguente:
+
+Il numero delle disposizioni semplici di n elementi distinti della classe k, è uguale al prodotto di k numeri interi consecutivi decrescenti dei quali il primo è n.
+
+Si ha cioè:
+Dn, k = n (n - 1) (n - 2) … (n - k +1)
+e si dimostra che:
+Dn, k = n! / (n - k +1)!
+
+Il simbolo n! si legge n fattoriale e non è altro che il prodotto di n numeri interi decrescenti a partire da n e per definizione si pone 0! = 1. Il suo calcolo è eseguito in uno dei metodi della classe calcComb().
+
+
+Disposizioni con ripetizione
+Si considera un insieme costituito da n elementi distinti ed un numero naturale k senza alcuna limitazione superiore. Il problema che si pone è quello di costruire tutti i possibili raggruppamenti distinti prendendo k oggetti in modo che:
+in ciascun raggruppamento figurano k oggetti ed uno stesso oggetto può figurare, ripetuto, fino ad un massimo di k volte;
+due qualsiasi raggruppamenti sono distinti se uno di essi contiene almeno un oggetto che non figura nell’altro, oppure gli oggetti sono diversamente ordinati, oppure gli oggetti che figurano in uno figurano anche nell’altro ma sono ripetuti un numero diverso di volte.
+
+Il numero delle disposizioni con ripetizione si indica con il simbolo D’n, k e si dimostra che tale numero è dato da:
+D’n, k = nk
+
+
+Permutazioni semplici
+Le permutazioni semplici altro non sono che le disposizioni di n oggetti presi ad n ad n. Ossia, dato un insieme di n oggetti, si dicono permutazioni di tali n oggetti tutti i gruppi che si possono formare con gli n oggetti dati prendendoli tutti. Se ne deduce allora che le
+permutazioni semplici differiscono soltanto per l’ordine con cui sono disposti gli n oggetti distinti contenuti nei vari raggruppamenti.
+Dalla definizione segue quindi che le permutazioni coincidono con le disposizioni semplici di classe n, quindi il calcolo delle permutazioni è uguale al calcolo del numero delle disposizioni semplici di n elementi di classe n; quindi il numero delle permutazioni di n elementi distinti è uguale al prodotto dei primi n numeri naturali (escluso lo zero) ed è dato dal fattoriale del numero n, ossia:
+Pn = n!
+
+Gli anagrammi altro non sono che le permutazioni che si ottengono da una parola variando solo il posto delle lettere.
+
+
+Permutazioni con ripetizione
+Le permutazioni con ripetizione di n elementi, di cui h, k, … ripetuti, sono tutti i gruppi formati dagli n elementi, che differiscono per l’ordine in cui si presentano gli elementi distinti e la posizione che occupano gli elementi ripetuti:
+Pn(h, k,...) = n! / (h! k! …)
+        
+     
+Combinazioni semplici
+Dato un insieme di n elementi, si dicono combinazioni semplici degli n elementi presi a k a k (o di classe k) k ≤ n tutti i gruppi di k elementi, scelti fra gli n dell’insieme dato, in modo che ciascun gruppo differisca dai restanti almeno per uno degli elementi in esso contenuti (senza
+considerare, quindi, l’ordine degli elementi).
+Da notare la differenza fra disposizioni e combinazioni (semplici): mentre nelle disposizioni si tiene conto dell’ordine, nelle combinazioni semplici, invece, si considerano distinti solo quando due i raggruppamenti differiscono almeno per un elemento. 
+Per determinare il numero delle combinazioni semplici di n elementi di classe k, e che indichiamo con il simbolo Cn, k, ci serviamo della formula:
+Cn,k = Dn, k / Pk = n (n - 1) (n - 2) … (n - k +1) / k! = n! / k! (n - k +1)!
+
+Il numero di combinazioni viene indicato anche con il simbolo (n; k), che si chiama coefficiente binomiale e si legge “n su k”.
+Il coefficiente binomiale di due numeri n e k, con 0  k  n, è il numero
+(n; k) = n! / k! (n - k +1)!
+
+
+Combinazioni con ripetizione
+Considerando un insieme formato da n elementi e fissando un numero k (senza alcuna limitazione superiore), si costruiscono i possibili raggruppamenti distinti prendendo k elementi dell’insieme dato in modo che:
+ogni elemento può essere ripetuto al massimo fino a k volte;
+non interessa l’ordine con cui gli elementi si presentano;
+è diverso il numero di volte col quale un elemento compare.
+
+La formula che dà il numero delle combinazioni con ripetizione di n elementi di classe k è:
+C’n, k = C’n+k-1, k = (n + k - 1; k) = (n + k - 1) (n + k - 2) … (n + 1) n / k!
