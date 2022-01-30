@@ -51,7 +51,7 @@ Oltre alla classica, vi sono altre modalità che presentano diverse caratteristi
 - 1vs4: la partita si disputerà in 8 giocatori.
 
 ***
-## Requisiti e Caratteristiche tecniche
+## Caratteristiche tecniche
 Il codice del gioco è stato scritto seguendo una programmazione a oggetti.
 ### Programmazione a oggetti
 La programmazione OOP (Object oriented Programming) "orientata agli oggetti", pone l’attenzione sui dati da manipolare, piuttosto che sulle procedure che li manipolano e impone che siano questi ultimi alla base del Modello Orientato ai Dati, un sistema costituito da un insieme di entità e oggetti che interagiscono tra loro. Il dato viene visto come un tipo di dato astratto caratterizzato da un insieme di valori che lo caratterizzano e da un insieme di operazioni che possono essere applicate a esso. E’ stata utilizzata la OOP poiché garantisce modularità e "riusabilità" del software, facile gestione e manutenzione di progetti di grandi dimensioni, riduce la dipendenza del programma dalla rappresentazione dei dati ai quali accede mediante un’interfaccia.
