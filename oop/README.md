@@ -3,7 +3,7 @@
 1. [Abstract Descrizione]
 2. [Interfaccia]
 3. [Funzionalità]
-4. [Collaboration]
+4. [Requisiti e Caratteristiche tecniche]
 5. [FAQs]
 ***
 
@@ -51,3 +51,4 @@ Oltre alla classica, vi sono altre modalità che presentano diverse caratteristi
 - hard, griglia 3x3;
 - 1vs4: la partita si disputerà in 8 giocatori.
 ***
+## Requisiti e Caratteristiche tecniche
