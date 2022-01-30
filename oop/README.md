@@ -60,18 +60,17 @@ Durante l’elaborazione un oggetto viene creato, utilizzato e infine distrutto.
 Nel nostro caso è stata creata la classe calcComb() che inizializza gli attributi dell’istanza e presenta come i moduli applicabili all’oggetto i modi per raggruppare e/o ordinare secondo date regole gli elementi di un insieme finito di oggetti, racchiusi nel Calcolo Combinatorio.
 
 In definitiva il Calcolo combinatorio fornisce quegli strumenti di calcolo per determinare il numero di raggruppamenti che si possono formare con un numero k di oggetti presi da un insieme contenente n oggetti (n ≥ k) secondo le modalità seguenti:
- i k oggetti possono formare gruppi ordinati (disposizioni);
-i k oggetti possono formare gruppi non ordinati (combinazioni);
-se k = n otterremo dei gruppi ordinati (permutazioni).
+- i k oggetti possono formare gruppi ordinati (disposizioni);
+- i k oggetti possono formare gruppi non ordinati (combinazioni);
+- se k = n otterremo dei gruppi ordinati (permutazioni).
 
 Esaminiamo in dettaglio questi raggruppamenti.
 
 
-Disposizioni semplici
-Si considera un insieme A formato da n elementi distinti ed un numero k ≤ n. Si chiamano disposizioni semplici degli n elementi presi a k a k ( o disposizioni della classe k) un gruppo ordinato formato da k degli n elementi dell’insieme dato A in modo che valgano le seguenti
-proprietà:
-in ciascun raggruppamento figurano k oggetti senza ripetizione;
-due di tali disposizioni si ritengono diverse quando differiscono per almeno un elemento oppure per l’ordine con cui gli stessi elementi si presentano.
+#### Disposizioni semplici
+Si considera un insieme A formato da n elementi distinti ed un numero k ≤ n. Si chiamano disposizioni semplici degli n elementi presi a k a k ( o disposizioni della classe k) un gruppo ordinato formato da k degli n elementi dell’insieme dato A in modo che valgano le seguenti proprietà:
+- in ciascun raggruppamento figurano k oggetti senza ripetizione;
+- due di tali disposizioni si ritengono diverse quando differiscono per almeno un elemento oppure per l’ordine con cui gli stessi elementi si presentano.
 
 Il numero delle disposizioni semplici di n elementi distinti, della classe k, si indica con il simbolo Dn, k il cui valore è dato dal teorema seguente:
 
@@ -79,22 +78,23 @@ Il numero delle disposizioni semplici di n elementi distinti della classe k, è 
 
 Si ha cioè:
 Dn, k = n (n - 1) (n - 2) … (n - k +1)
+
 e si dimostra che:
 Dn, k = n! / (n - k +1)!
 
 Il simbolo n! si legge n fattoriale e non è altro che il prodotto di n numeri interi decrescenti a partire da n e per definizione si pone 0! = 1. Il suo calcolo è eseguito in uno dei metodi della classe calcComb().
 
 
-Disposizioni con ripetizione
+#### Disposizioni con ripetizione
 Si considera un insieme costituito da n elementi distinti ed un numero naturale k senza alcuna limitazione superiore. Il problema che si pone è quello di costruire tutti i possibili raggruppamenti distinti prendendo k oggetti in modo che:
-in ciascun raggruppamento figurano k oggetti ed uno stesso oggetto può figurare, ripetuto, fino ad un massimo di k volte;
-due qualsiasi raggruppamenti sono distinti se uno di essi contiene almeno un oggetto che non figura nell’altro, oppure gli oggetti sono diversamente ordinati, oppure gli oggetti che figurano in uno figurano anche nell’altro ma sono ripetuti un numero diverso di volte.
+- in ciascun raggruppamento figurano k oggetti ed uno stesso oggetto può figurare, ripetuto, fino ad un massimo di k volte;
+- due qualsiasi raggruppamenti sono distinti se uno di essi contiene almeno un oggetto che non figura nell’altro, oppure gli oggetti sono diversamente ordinati, oppure gli oggetti che figurano in uno figurano anche nell’altro ma sono ripetuti un numero diverso di volte.
 
 Il numero delle disposizioni con ripetizione si indica con il simbolo D’n, k e si dimostra che tale numero è dato da:
 D’n, k = nk
 
 
-Permutazioni semplici
+#### Permutazioni semplici
 Le permutazioni semplici altro non sono che le disposizioni di n oggetti presi ad n ad n. Ossia, dato un insieme di n oggetti, si dicono permutazioni di tali n oggetti tutti i gruppi che si possono formare con gli n oggetti dati prendendoli tutti. Se ne deduce allora che le
 permutazioni semplici differiscono soltanto per l’ordine con cui sono disposti gli n oggetti distinti contenuti nei vari raggruppamenti.
 Dalla definizione segue quindi che le permutazioni coincidono con le disposizioni semplici di classe n, quindi il calcolo delle permutazioni è uguale al calcolo del numero delle disposizioni semplici di n elementi di classe n; quindi il numero delle permutazioni di n elementi distinti è uguale al prodotto dei primi n numeri naturali (escluso lo zero) ed è dato dal fattoriale del numero n, ossia:
@@ -103,12 +103,12 @@ Pn = n!
 Gli anagrammi altro non sono che le permutazioni che si ottengono da una parola variando solo il posto delle lettere.
 
 
-Permutazioni con ripetizione
+#### Permutazioni con ripetizione
 Le permutazioni con ripetizione di n elementi, di cui h, k, … ripetuti, sono tutti i gruppi formati dagli n elementi, che differiscono per l’ordine in cui si presentano gli elementi distinti e la posizione che occupano gli elementi ripetuti:
 Pn(h, k,...) = n! / (h! k! …)
         
      
-Combinazioni semplici
+#### Combinazioni semplici
 Dato un insieme di n elementi, si dicono combinazioni semplici degli n elementi presi a k a k (o di classe k) k ≤ n tutti i gruppi di k elementi, scelti fra gli n dell’insieme dato, in modo che ciascun gruppo differisca dai restanti almeno per uno degli elementi in esso contenuti (senza
 considerare, quindi, l’ordine degli elementi).
 Da notare la differenza fra disposizioni e combinazioni (semplici): mentre nelle disposizioni si tiene conto dell’ordine, nelle combinazioni semplici, invece, si considerano distinti solo quando due i raggruppamenti differiscono almeno per un elemento. 
@@ -120,7 +120,7 @@ Il coefficiente binomiale di due numeri n e k, con 0  k  n, è il numero
 (n; k) = n! / k! (n - k +1)!
 
 
-Combinazioni con ripetizione
+#### Combinazioni con ripetizione
 Considerando un insieme formato da n elementi e fissando un numero k (senza alcuna limitazione superiore), si costruiscono i possibili raggruppamenti distinti prendendo k elementi dell’insieme dato in modo che:
 ogni elemento può essere ripetuto al massimo fino a k volte;
 non interessa l’ordine con cui gli elementi si presentano;
