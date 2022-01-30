@@ -14,24 +14,19 @@ Si svolgeranno 3 round al termine dei quali il vincitore sarà chi avrà totaliz
 ## Interfaccia
 Le schermate utilizzate nel gioco sono:
 1. Schermata di avvio
-
 ![schermata-di-avvio](https://github.com/ettoreiovine/Iovine/blob/main/oop/Interfaccia/Schermata_di_avvio.png)
 
 2. Schermata iniziale
-
 ![schermata-iniziale](https://github.com/ettoreiovine/Iovine/blob/main/oop/Interfaccia/Schermata_iniziale.png)
 
 3. Interfaccia di gioco
-
 ![interfaccia-gioco](https://github.com/ettoreiovine/Iovine/blob/main/oop/Interfaccia/Interfaccia_gioco.png)
 
 4. Schermata fine round
-
 ![schermata-fine-round](https://github.com/ettoreiovine/Iovine/blob/main/oop/Interfaccia/Schermata_fine_round.png)
 
 6. Schermata finale
-
-![schermata-finale](https://github.com/ettoreiovine/Iovine/blob/main/oop/Interfaccia/Schermata_finale.png
+![schermata-finale](https://github.com/ettoreiovine/Iovine/blob/main/oop/Interfaccia/Schermata_finale.png)
 
 ***
 
