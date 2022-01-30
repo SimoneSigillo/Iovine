@@ -75,13 +75,11 @@ Si considera un insieme A formato da n elementi distinti ed un numero k ≤ n. S
 - in ciascun raggruppamento figurano k oggetti senza ripetizione;
 - due di tali disposizioni si ritengono diverse quando differiscono per almeno un elemento oppure per l’ordine con cui gli stessi elementi si presentano.
 
-Il numero delle disposizioni semplici di n elementi distinti della classe k, si indica con il simbolo ![simbolo-disposizioni-semplici](C:\Users\ettor\Desktop\Ettore\Classroom\Coding\oop)Dn, k il cui valore è uguale al prodotto di k numeri interi consecutivi decrescenti dei quali il primo è n.
+Il numero delle disposizioni semplici di n elementi distinti della classe k, si indica con il simbolo Dn, k il cui valore è uguale al prodotto di k numeri interi consecutivi decrescenti dei quali il primo è n.
 
 Si ha cioè:
-Dn, k = n (n - 1) (n - 2) … (n - k +1)
 
-e si dimostra che:
-Dn, k = n! / (n - k +1)!
+![forumla-disposizioni-semplici](https://www.okpedia.it/data/okpedia/formula-disposizioni-senza-ripetizioni.gif)
 
 Il simbolo n! si legge n fattoriale e non è altro che il prodotto di n numeri interi decrescenti a partire da n e per definizione si pone 0! = 1. Il suo calcolo è eseguito in uno dei metodi della classe calcComb().
 
@@ -91,7 +89,8 @@ Si considera un insieme costituito da n elementi distinti ed un numero naturale 
 - due qualsiasi raggruppamenti sono distinti se uno di essi contiene almeno un oggetto che non figura nell’altro, oppure gli oggetti sono diversamente ordinati, oppure gli oggetti che figurano in uno figurano anche nell’altro ma sono ripetuti un numero diverso di volte.
 
 Il numero delle disposizioni con ripetizione si indica con il simbolo D’n, k e si dimostra che tale numero è dato da:
-D’n, k = nk
+
+![forumla-disposizioni-con-ripetizione](https://www.studenti.it/images/matematica/pictures/4135mo/images/MO.4.13.5_9256.png)
 
 #### Permutazioni semplici
 Le permutazioni semplici altro non sono che le disposizioni di n oggetti presi ad n ad n. Ossia, dato un insieme di n oggetti, si dicono permutazioni di tali n oggetti tutti i gruppi che si possono formare con gli n oggetti dati prendendoli tutti. Se ne deduce allora che le
