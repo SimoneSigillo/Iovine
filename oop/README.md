@@ -67,6 +67,7 @@ In definitiva il Calcolo combinatorio fornisce quegli strumenti di calcolo per d
 Esaminiamo in dettaglio questi raggruppamenti.
 
 
+
 #### Disposizioni semplici
 Si considera un insieme A formato da n elementi distinti ed un numero k ≤ n. Si chiamano disposizioni semplici degli n elementi presi a k a k ( o disposizioni della classe k) un gruppo ordinato formato da k degli n elementi dell’insieme dato A in modo che valgano le seguenti proprietà:
 - in ciascun raggruppamento figurano k oggetti senza ripetizione;
@@ -83,6 +84,7 @@ e si dimostra che:
 Dn, k = n! / (n - k +1)!
 
 Il simbolo n! si legge n fattoriale e non è altro che il prodotto di n numeri interi decrescenti a partire da n e per definizione si pone 0! = 1. Il suo calcolo è eseguito in uno dei metodi della classe calcComb().
+
 
 
 #### Disposizioni con ripetizione
@@ -103,11 +105,13 @@ Pn = n!
 Gli anagrammi altro non sono che le permutazioni che si ottengono da una parola variando solo il posto delle lettere.
 
 
+
 #### Permutazioni con ripetizione
 Le permutazioni con ripetizione di n elementi, di cui h, k, … ripetuti, sono tutti i gruppi formati dagli n elementi, che differiscono per l’ordine in cui si presentano gli elementi distinti e la posizione che occupano gli elementi ripetuti:
 Pn(h, k,...) = n! / (h! k! …)
         
-     
+   
+   
 #### Combinazioni semplici
 Dato un insieme di n elementi, si dicono combinazioni semplici degli n elementi presi a k a k (o di classe k) k ≤ n tutti i gruppi di k elementi, scelti fra gli n dell’insieme dato, in modo che ciascun gruppo differisca dai restanti almeno per uno degli elementi in esso contenuti (senza
 considerare, quindi, l’ordine degli elementi).
@@ -118,6 +122,7 @@ Cn,k = Dn, k / Pk = n (n - 1) (n - 2) … (n - k +1) / k! = n! / k! (n - k +1)!
 Il numero di combinazioni viene indicato anche con il simbolo (n; k), che si chiama coefficiente binomiale e si legge “n su k”.
 Il coefficiente binomiale di due numeri n e k, con 0  k  n, è il numero
 (n; k) = n! / k! (n - k +1)!
+
 
 
 #### Combinazioni con ripetizione
