@@ -1,10 +1,9 @@
 # RUZZLE
 ### Indice
-1. [Abstract Descrizione](#Abstract-Descrizione)
+1. [Descrizione](#Descrizione)
 2. [Interfaccia](#Interfaccia)
 3. [Funzionalità](#Funzionalità)
-4. [Requisiti e Caratteristiche tecniche](#Requisiti-e-Caratteristiche-tecniche)
-5. [FAQs]
+4. [Caratteristiche tecniche](#Caratteristiche-tecniche)
 ***
 
 ## Abstract Descrizione
@@ -50,6 +49,7 @@ Oltre alla classica, vi sono altre modalità che presentano diverse caratteristi
 - easy, griglia 6x6;
 - hard, griglia 3x3;
 - 1vs4: la partita si disputerà in 8 giocatori.
+
 ***
 ## Requisiti e Caratteristiche tecniche
 Il codice del gioco è stato scritto seguendo una programmazione a oggetti.
@@ -70,16 +70,12 @@ In definitiva il Calcolo combinatorio fornisce quegli strumenti di calcolo per d
 
 Esaminiamo in dettaglio questi raggruppamenti.
 
-
-
 #### Disposizioni semplici
 Si considera un insieme A formato da n elementi distinti ed un numero k ≤ n. Si chiamano disposizioni semplici degli n elementi presi a k a k ( o disposizioni della classe k) un gruppo ordinato formato da k degli n elementi dell’insieme dato A in modo che valgano le seguenti proprietà:
 - in ciascun raggruppamento figurano k oggetti senza ripetizione;
 - due di tali disposizioni si ritengono diverse quando differiscono per almeno un elemento oppure per l’ordine con cui gli stessi elementi si presentano.
 
-Il numero delle disposizioni semplici di n elementi distinti, della classe k, si indica con il simbolo Dn, k il cui valore è dato dal teorema seguente:
-
-Il numero delle disposizioni semplici di n elementi distinti della classe k, è uguale al prodotto di k numeri interi consecutivi decrescenti dei quali il primo è n.
+Il numero delle disposizioni semplici di n elementi distinti della classe k, si indica con il simbolo ![simbolo-disposizioni-semplici](C:\Users\ettor\Desktop\Ettore\Classroom\Coding\oop)Dn, k il cui valore è uguale al prodotto di k numeri interi consecutivi decrescenti dei quali il primo è n.
 
 Si ha cioè:
 Dn, k = n (n - 1) (n - 2) … (n - k +1)
@@ -89,8 +85,6 @@ Dn, k = n! / (n - k +1)!
 
 Il simbolo n! si legge n fattoriale e non è altro che il prodotto di n numeri interi decrescenti a partire da n e per definizione si pone 0! = 1. Il suo calcolo è eseguito in uno dei metodi della classe calcComb().
 
-
-
 #### Disposizioni con ripetizione
 Si considera un insieme costituito da n elementi distinti ed un numero naturale k senza alcuna limitazione superiore. Il problema che si pone è quello di costruire tutti i possibili raggruppamenti distinti prendendo k oggetti in modo che:
 - in ciascun raggruppamento figurano k oggetti ed uno stesso oggetto può figurare, ripetuto, fino ad un massimo di k volte;
@@ -98,7 +92,6 @@ Si considera un insieme costituito da n elementi distinti ed un numero naturale 
 
 Il numero delle disposizioni con ripetizione si indica con il simbolo D’n, k e si dimostra che tale numero è dato da:
 D’n, k = nk
-
 
 #### Permutazioni semplici
 Le permutazioni semplici altro non sono che le disposizioni di n oggetti presi ad n ad n. Ossia, dato un insieme di n oggetti, si dicono permutazioni di tali n oggetti tutti i gruppi che si possono formare con gli n oggetti dati prendendoli tutti. Se ne deduce allora che le
@@ -108,14 +101,10 @@ Pn = n!
 
 Gli anagrammi altro non sono che le permutazioni che si ottengono da una parola variando solo il posto delle lettere.
 
-
-
 #### Permutazioni con ripetizione
 Le permutazioni con ripetizione di n elementi, di cui h, k, … ripetuti, sono tutti i gruppi formati dagli n elementi, che differiscono per l’ordine in cui si presentano gli elementi distinti e la posizione che occupano gli elementi ripetuti:
 Pn(h, k,...) = n! / (h! k! …)
         
-   
-   
 #### Combinazioni semplici
 Dato un insieme di n elementi, si dicono combinazioni semplici degli n elementi presi a k a k (o di classe k) k ≤ n tutti i gruppi di k elementi, scelti fra gli n dell’insieme dato, in modo che ciascun gruppo differisca dai restanti almeno per uno degli elementi in esso contenuti (senza
 considerare, quindi, l’ordine degli elementi).
@@ -126,8 +115,6 @@ Cn,k = Dn, k / Pk = n (n - 1) (n - 2) … (n - k +1) / k! = n! / k! (n - k +1)!
 Il numero di combinazioni viene indicato anche con il simbolo (n; k), che si chiama coefficiente binomiale e si legge “n su k”.
 Il coefficiente binomiale di due numeri n e k, con 0  k  n, è il numero
 (n; k) = n! / k! (n - k +1)!
-
-
 
 #### Combinazioni con ripetizione
 Considerando un insieme formato da n elementi e fissando un numero k (senza alcuna limitazione superiore), si costruiscono i possibili raggruppamenti distinti prendendo k elementi dell’insieme dato in modo che:
